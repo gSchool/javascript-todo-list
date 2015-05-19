@@ -1,18 +1,20 @@
+//Add the ability to click on a todo item 
+//to toggle it completed. 
+//Can you make use of event bubbling?
+
 body = document.querySelector('body');
 input = document.createElement('input')
 button = document.createElement('button')
-item = document.createElement('div')
+div = document.createElement('div')
 ul = document.createElement('ul')
 
-input.placeholder  = "what do you need to do"
+input.placeholder  = "type your to-do task here"
 
 
-
-
-item.innerHTML = 'test';
-button.name = "Add Todo"
-button.id = "add_todo"
-button.innerHTML = "Add Todo"
+div.innerHTML = 'test';
+button.name = "submit"
+button.id = "submit"
+button.innerHTML = "click to submit"
 
 body.appendChild(input)
 body.appendChild(button)
@@ -36,8 +38,19 @@ if(e.which === 13)
 	li = document.createElement('li')
 	li.innerHTML = input.value
 	ul.appendChild(li)
+	input.value = ""
+
 }
 
 var x = this.value;
 console.log(x);
 	})
+
+ul.addEventListener("click", function(e){
+	if(e.srcElement.className){
+		e.srcElement.className = "";
+	}
+	else {
+		e.srcElement.className = "completed";
+	}
+});
