@@ -8,3 +8,10 @@ console.dir(list);
     list.innerHTML += "<li>" + input.value + "</li>";
     input.value = "";
 });
+
+//input.addEventListener('keyup', function(){
+//console.log(list.innerText);
+//console.dir(list);
+//    list.innerHTML += "<li>" + input.value + "</li>";
+//    input.value = "";
+//});
