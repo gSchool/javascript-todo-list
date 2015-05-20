@@ -20,7 +20,12 @@ document.querySelector('body').addEventListener('click', function(event) {
 });
 
 var markCompleted = function(li){
-	li.classList.add('completed');
+	if (li.classList[0] ==='completed') {
+		li.classList.remove('completed');
+	} else {
+		li.classList.add('completed');
+	}
+	
 };
 
 var getDate = function() {
