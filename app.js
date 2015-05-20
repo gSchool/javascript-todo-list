@@ -5,7 +5,7 @@ var completed = document.getElementsByClassName('completed');
 
 button.addEventListener('click', function(){
   var addEvent = input.value;
-    output.innerHTML = todoEvents.innerHTML + '<ul>' + addEvent;
+    output.innerHTML = todoEvents.innerHTML + '<li>' + addEvent;
   	input.value = '';
 });
 
