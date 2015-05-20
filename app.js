@@ -7,9 +7,7 @@ var listHTML = function(item){
     return "";
   }
   else {
-  return "<li>" +
-           item
-         "</li>";
+  return "<li>" + item + "</li>";
   }
 };
 
