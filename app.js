@@ -2,12 +2,17 @@
 var input = document.getElementsByTagName('input')[0];
 var list = document.getElementsByTagName('ul')[0];
 
+var dateString = function() {
+  var a = new Date;
+  return '<div>' + '<time>' + a.toString() + '</time>' + '</div>';
+};
+
 var listHTML = function(item){
   if(item === ""){
     return "";
   }
   else {
-  return "<li>" + item + "</li>";
+  return "<li>" + dateString() + item + "</li>";
   }
 };
 
