@@ -6,4 +6,5 @@ var list = document.getElementById("list");
 var addItem = function(){
   var text = input.value;
   container.innerHTML = container.innerHTML + "<li>" + text + "</li>";
+  input.value = "";
 }
