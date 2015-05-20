@@ -10,5 +10,21 @@ form.addEventListener("submit", function(event) {
 });
 
 var addTodo = function (input) {
-	ul.innerHTML = ul.innerHTML + '<li>' + input.value + '</li>';
+	ul.innerHTML = ul.innerHTML + '<li>' + input.value + " " + getDate() +'</li>';
 };
+
+document.querySelector('body').addEventListener('click', function(event) {
+  if (event.target.tagName.toLowerCase() === 'li') {
+    markCompleted(event.target);
+  }
+});
+
+var markCompleted = function(li){
+	li.classList.add('completed');
+};
+
+var getDate = function() {
+	var date = new Date();
+
+	return date.toLocaleString();
+}
