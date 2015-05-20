@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+body {
+  max-width:320px;
+  margin:0 auto;
+}
+h1 {
+  font-size:52px;
+  font-weight:300;
+  margin:10px 0 20px 0;
+}
+input {
+  border:none;
+  width:100%;
+  font-size:22px;
+  background:#eee;
+  padding:8px 20px;
+}
+ul {
+  margin:20px 0;
+  padding:0;
+}
+ul li {
+  width:100%;
+  list-style-type: none;
+  background:#ccc;
+  color:#666;
+  margin-bottom:1px;
+  padding:8px 20px;
+  font-size:22px;
+}
+
+.completed {
+  text-decoration:line-through;
+  color:#eee;
+}
+
+#add_todo{
+  margin-left:10px;
+  background:#FF6666;
+  color:#662929;
+  font-size:16px;
+  border:none;
+  padding:8px 20px;
+  letter-spacing:2px;
+  box-shadow:0 2px 0 0 #662929;
+  border-radius:4px;
+}
