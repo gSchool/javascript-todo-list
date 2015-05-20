@@ -2,7 +2,7 @@ var addToDo = document.getElementById("add_todo");
 var input = document.getElementById("input");
 var output = document.getElementById("output");
 var song = document.getElementsByClassName("easter_egg");
-
+var li = document.getElementsByTagName("li")
 
 
 addToDo.addEventListener("click", function() {
@@ -18,3 +18,4 @@ addToDo.addEventListener("click", function() {
   output.lastChild.innerHTML = input.value;
   }
 });
+
