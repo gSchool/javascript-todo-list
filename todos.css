@@ -31,13 +31,12 @@ ul li {
   margin-bottom:1px;
   padding:8px 20px;
   font-size:22px;
+  border-bottom: solid 1px white;
 }
-
 .completed {
   text-decoration:line-through;
   color:#eee;
 }
-
 #add_todo{
   margin-left:10px;
   background:#FF6666;
