@@ -19,4 +19,5 @@ li.addEventListener('click', function() {
 
 function post(todo) {
   ul[0].innerHTML = ul[0].innerHTML + '<li>' + todo.value + '<br/>' + moment().format('MMMM Do YYYY, h:mm:ss a') + '</li>';
+  todo.value = null;
 }
