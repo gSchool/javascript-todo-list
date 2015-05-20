@@ -11,3 +11,7 @@ input.addEventListener("keypress", function(e) {
     output.innerHTML += '<li>' + input.value + '</li>';
   }
 });
+
+li.addEventListener("click", function() {
+  li.classList.add('completed');
+});
