@@ -1,6 +1,7 @@
 var ul=document.querySelector("ul");
 var input=document.getElementById("input");
 var button=document.getElementById("add_todo");
+var body=document.querySelector("body");
 var newField="";
 
 function newList(){
@@ -14,6 +15,13 @@ function newList(){
 button.addEventListener("click", function(e){
    newList(e);
 });
+
+input.addEventListener("keydown", function(e){
+  if (e.keyCode===13){
+    newList(e);
+  }
+});
+
 
 body.addEventListener("click", function(event) {
  if (event.target.tagName.toLowerCase() === "li") {
