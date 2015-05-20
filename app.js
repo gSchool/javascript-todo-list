@@ -7,5 +7,6 @@ button.addEventListener('click', function(){
 
   var todoItem = "<li>" + input.value + "</li>";
   output.innerHTML += todoItem;
+  input.value = "";
 
 });
