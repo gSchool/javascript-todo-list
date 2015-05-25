@@ -3,7 +3,7 @@ var input = document.getElementById('input');
 var ul = document.getElementsByTagName('ul')[0];
 var body = document.querySelector('body');
 var date = new Date();
-date = moment(date).format('MMMM Do YYYY, h:mm:ss a');
+date = moment(date).format('LLL');
 
 var addTodo = function(e) {
   if (e.keyCode === 13 || e.type === "click") {
