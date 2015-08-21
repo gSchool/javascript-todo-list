@@ -1,50 +1,51 @@
 //Add the ability to click on a todo item 
 //to toggle it completed. 
 //Can you make use of event bubbling?
+document.addEventListener("DOMContentLoaded",function(){
 
 body = document.querySelector('body');
-input = document.createElement('input')
-button = document.createElement('button')
-div = document.createElement('div')
-ul = document.createElement('ul')
+input = document.createElement('input');
+button = document.createElement('button');
+div = document.createElement('div');
+ul = document.createElement('ul');
 
-input.placeholder  = "type your to-do task here"
+input.placeholder  = "type your to-do task here";
 
 
 div.innerHTML = 'test';
-button.name = "submit"
-button.id = "submit"
-button.innerHTML = "click to submit"
+button.name = "submit";
+button.id = "add_todo";
+button.innerHTML = "click to submit";
 
-body.appendChild(input)
-body.appendChild(button)
-body.appendChild(ul)
+body.appendChild(input);
+body.appendChild(button);
+body.appendChild(ul);
 
 button.addEventListener('mousedown',function(e) {
 console.log(e);
 
-li = document.createElement('li')
-li.innerHTML = input.value
+li = document.createElement('li');
+li.innerHTML = input.value;
 
-	ul.appendChild(li)
+	ul.appendChild(li);
 
-	})
+	});
 
 input.addEventListener('keypress',function(e) {
 console.log(e);
 
 if(e.which === 13)
 {
-	li = document.createElement('li')
-	li.innerHTML = input.value
-	ul.appendChild(li)
-	input.value = ""
+	li = document.createElement('li');
+	li.innerHTML = input.value;
+	ul.appendChild(li);
+	input.value = "";
 
 }
 
 var x = this.value;
 console.log(x);
-	})
+	});
 
 ul.addEventListener("click", function(e){
 	if(e.srcElement.className){
@@ -53,4 +54,5 @@ ul.addEventListener("click", function(e){
 	else {
 		e.srcElement.className = "completed";
 	}
+});
 });
