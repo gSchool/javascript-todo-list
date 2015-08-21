@@ -1,3 +1,8 @@
+//Still to do:
+//Add a delete <span> to every todo item. 
+//When the user clicks the span, 
+//it should delete that specific todo.
+
 document.addEventListener("DOMContentLoaded",function(){
 
 body = document.querySelector('body');
