@@ -1,4 +1,5 @@
-//Add the ability to click on a todo item 
+//Still need to add the ability 
+//to click on a todo item 
 //to toggle it completed. 
 //Can you make use of event bubbling?
 document.addEventListener("DOMContentLoaded",function(){
