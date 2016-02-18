@@ -15,6 +15,16 @@ $(document).ready(function(){
     }
   });
   
+  // Any todo items that are clicked get the completed class
+  $('#todo').on('click', 'li', function() {
+    $(this).addClass('completed');
+  })
+  
+  // Any todo items that are completed and get clicked again nolonger appear completed
+  $('#todo').on('click', '.completed', function() {
+  $(this).removeClass('completed');
+  })
+  
 });
 
 appendTodo = function () {
