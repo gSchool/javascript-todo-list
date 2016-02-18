@@ -6,6 +6,7 @@ function ToDoList(id, name) {
   this.ul = document.getElementById('listOfTodos');
   this.addTodo = function (task) {
     var todo = new ToDo(currentID, task);
+    currentID++;
     tasks.push(todo);
     this.ul.appendChild(todo.getElement());
   };
