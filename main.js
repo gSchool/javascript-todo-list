@@ -1,12 +1,13 @@
 $(document).ready(function(){
   console.log('Hello!');
   
+  // Add new todos to the DOM if the 'add todo' button is clicked
   $('#add_todo').on('click', function(e){
     e.preventDefault();
-    console.log('test');
     appendTodo();
   });
   
+  // Add new todos to the DOM if the return key is used in the input field
   $('#input').keypress(function(e) {
     if(e.which === 13) {
       e.preventDefault();
