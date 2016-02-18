@@ -1,24 +1,41 @@
 $(document).on('ready', function() {
-  addToDo();
-  pressEnter();
+  addOnKeypress();
+  selectTodo();
+  addOnBtnClick();
 });
 
 var userInput;
+var taskId = 0;
 
-function addToDo (event) {
-  $('#add_todo').on('click', function() {
-    userInput = $('#userInput').val();
-    $('#todoList').append("<li>" + userInput + "</li>");
-  });
+
+function appendToDo () {
+  userInput = $('#userInput').val();
+  taskId += 1;
+  $('#todoList').append("<li class='task' id=" + taskId + ">" + userInput + "</li>");
+  $('#userInput').val('');
 }
 
-function pressEnter () {
+function addOnKeypress () {
   $('#userInput').keypress(function(event) {
     if(event.which === 13) {
       event.preventDefault();
-      userInput = $('#userInput').val();
-      $('#todoList').append("<li>" + userInput + "</li>");
+      appendToDo();
     }
   });
 }
 
+function addOnBtnClick () {
+  $('#add_todo').on('click', function(event) {
+      appendToDo();
+    });
+}
+
+var selectedTask;
+function selectTodo () {
+  $(document).on('click', '.task', function() {
+    selectedTask = $(this).attr('id');
+    $('.task').css('background-color', '#ccc');
+    $(this).css('background-color', 'rgba(63,238,235,.7)');
+    console.log(selectedTask);
+  });
+}
