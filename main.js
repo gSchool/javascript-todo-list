@@ -2,6 +2,7 @@ $(document).on('ready', function() {
   addOnKeypress();
   selectTodo();
   addOnBtnClick();
+  appendBtns();
 });
 
 var userInput;
@@ -39,3 +40,11 @@ function selectTodo () {
     console.log(selectedTask);
   });
 }
+
+function appendBtns () {
+  $(document).on('click', '.task', function() {
+    $('.question').empty();
+    $('body').append('<div class="question">' + askIfComplete + confirmBtn + rejectBtn + '</div>');
+    // $('.question').append(rejectBtn);
+  }
+);}
