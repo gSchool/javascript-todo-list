@@ -14,5 +14,5 @@ $("form").on("submit", function(event){
 });
 
 $("ul").on("click", "li", function(){
-	$(this).addClass("completed");
+	$(this).toggleClass("completed");
 });
