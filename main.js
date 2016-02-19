@@ -13,9 +13,14 @@ var taskId = 0;
 // Function that appends the user input to the dom, just below the input box.
 function appendToDo () {
   userInput = $('#userInput').val();
-  taskId += 1;
-  $('#todoList').append("<li class='task' id=" + taskId + ">" + userInput + "</li>");
-  $('#userInput').val('');
+  if (userInput) {
+    taskId += 1;
+    $('#todoList').append("<li class='task' id=" + taskId + ">" + userInput + "</li>");
+    $('#userInput').val('');
+    }
+  else {
+    console.log("ERROR - NO INPUT");
+  }
 }
 
 // Function to allow the user to append to the dom by pressing the return or enter key
