@@ -10,7 +10,7 @@ $(document).on('ready', function() {
 var userInput;
 var taskId = 0;
 
-
+// Function that appends the user input to the dom, just below the input box.
 function appendToDo () {
   userInput = $('#userInput').val();
   taskId += 1;
@@ -18,6 +18,7 @@ function appendToDo () {
   $('#userInput').val('');
 }
 
+// Function to allow the user to append to the dom by pressing the return or enter key
 function addOnKeypress () {
   $('#userInput').keypress(function(event) {
     if(event.which === 13) {
@@ -27,7 +28,7 @@ function addOnKeypress () {
   });
 }
 
-// function to run appendTodo() when the 'Add Todo' button is clicked
+// Function to run appendTodo() when the 'Add Todo' button is clicked
 function addOnBtnClick () {
   $('#add_todo').on('click', function(event) {
       appendToDo();
@@ -49,14 +50,16 @@ function selectTodo () {
   });
 }
 
+// Function that asks the user if the task selected has been completed, and adds clickable 'Yes' or 'Nope' buttons.
 function appendBtns () {
   $(document).on('click', '.task', function() {
     $('.question').empty();
     $('body').append('<div class="question">' + askIfComplete + confirmBtn + rejectBtn + '</div>');
-    // $('.question').append(rejectBtn);
   }
 );}
 
+// This function will add a classname of 'completed' to the list item (li) selected if the
+// 'Yes' button is clicked.
 function taskCompleted () {
   $(document).on('click', '#confirm', function() {
     var list = $('ul');
@@ -68,6 +71,8 @@ function taskCompleted () {
   });
 }
 
+// This function will remove a classname of 'completed' from the list item (li)
+// selected if the 'Nope' button is clicked.
 function notCompleted () {
   $(document).on('click', '#reject', function() {
     var list = $('ul');
