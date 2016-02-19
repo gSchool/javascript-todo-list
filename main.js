@@ -20,6 +20,7 @@ $(document).ready(function(){
     
     if(e.which === 13) {
       e.preventDefault();
+      
       // Update objects
       var update = addTask(0, newTodo)
       appendTodo(newTodo);  
