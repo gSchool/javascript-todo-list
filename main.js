@@ -27,7 +27,7 @@ $(document).ready(function(){
   
 });
 
-appendTodo = function () {
+var appendTodo = function () {
   // Create a variable continaing the new todo
   var newTodo = $('#input').val();
 
