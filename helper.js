@@ -28,10 +28,19 @@ var Task = function (todo) {
   this.completed = 'false';
 };
 
-
-todoLists.push(new TodoList('test0'));
+todoLists.push(new TodoList('list0'));
 listsCounter += 1;
-todoLists.push(new TodoList('test1'));
+todoLists.push(new TodoList('list1'));
 
-todoLists[0].tasks = new Task('what am I doing?');
+var newTodo = new Task('what am I doing?');
+console.log(newTodo);
+todoLists[0].tasks.push(newTodo); 
+
+tasksCounter += 1;
+
+var newTodo = new Task('How am I doing?');
+console.log(newTodo);
+todoLists[0].tasks.push(newTodo);
+
 console.log(todoLists);
+console.log(todoLists[0].tasks[0]);
