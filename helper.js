@@ -1,6 +1,7 @@
 //////////////////////
 var listsCounter = 0;
 var tasksCounter = 0;
+var idTracker = 0;
 
 var todoLists = [];
 

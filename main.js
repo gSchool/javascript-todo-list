@@ -10,7 +10,8 @@ $(document).ready(function(){
     
     // Update objects
     var update = addTask(0, newTodo)
-    appendTodo(newTodo);
+    var id = todoLists[0].tasks[idTracker]['taskID'];
+    appendTodo(newTodo, id);
   });
   
   // Add new todos to the DOM if the return key is used in the input field
@@ -28,18 +29,19 @@ $(document).ready(function(){
   // Any todo items that are clicked get the completed class
   $('#todo-01').on('click', 'li', function() {
     $(this).addClass('completed');
-    
+    todoLists[0].tasks[idTracker]['completed'] = 'true';
   })
   
   // Any todo items that are completed and get clicked again nolonger appear completed
   $('#todo-01').on('click', '.completed', function() {
     $(this).removeClass('completed');
+    todoLists[0].tasks[idTracker]['completed'] = 'false';
   })
   
 });
 
-var appendTodo = function (newTodo) {
+var appendTodo = function (newTodo, id) {
   // Append the new todo to the list of todos and clear out the input form
-  $('#todo-01').append('<li>' + newTodo + '</li>');
+  $('#todo-01').append('<li id='+ id +'>' + newTodo + '</li>');
   $('#input').val('');
 }
