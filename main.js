@@ -3,6 +3,8 @@ $(document).on('ready', function() {
   selectTodo();
   addOnBtnClick();
   appendBtns();
+  taskCompleted();
+  notCompleted();
 });
 
 var userInput;
@@ -25,19 +27,25 @@ function addOnKeypress () {
   });
 }
 
+// function to run appendTodo() when the 'Add Todo' button is clicked
 function addOnBtnClick () {
   $('#add_todo').on('click', function(event) {
       appendToDo();
     });
 }
 
-var selectedTask;
+// Function to set a variable value equal to the currently selected task id and class name
+var selectedTaskId = 0;
+var selectedTaskClass;
 function selectTodo () {
   $(document).on('click', '.task', function() {
-    selectedTask = $(this).attr('id');
-    $('.task').css('background-color', '#ccc');
-    $(this).css('background-color', 'rgba(63,238,235,.7)');
-    console.log(selectedTask);
+    selectedTaskId = $(this).attr('id');
+    selectedTaskClass = $(this).attr('class');
+    $('.task').css('border', 'none');
+    $(this).css('border', '1px solid black');
+    console.log('SelectedTask (id):',selectedTaskId);
+    console.log('SelectedTaskClass (class):', selectedTaskClass);
+    return selectedTaskId;
   });
 }
 
@@ -48,3 +56,26 @@ function appendBtns () {
     // $('.question').append(rejectBtn);
   }
 );}
+
+function taskCompleted () {
+  $(document).on('click', '#confirm', function() {
+    var list = $('ul');
+    for(var i=0; i<list[0].children.length; i++) {
+      if (selectedTaskId === list[0].children[i].id) {
+        $('#' + selectedTaskId + '').addClass('completed');
+      }
+    }
+  });
+}
+
+function notCompleted () {
+  $(document).on('click', '#reject', function() {
+    var list = $('ul');
+    for(var i=0; i<list[0].children.length; i++) {
+      console.log('loop class:',list[0].children[i].className);
+      if (selectedTaskClass === list[0].children[i].className) {
+        $('#' + selectedTaskId + '').removeClass('completed');
+      }
+    }
+  });
+}

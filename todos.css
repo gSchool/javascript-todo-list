@@ -38,7 +38,7 @@ ul li {
   color:#eee;
 }
 
-#add_todo, .yesBtn, .noBtn {
+#add_todo, #confirm, #reject {
   margin-left:10px;
   background:#FF6666;
   color:#662929;
