@@ -1,23 +1,24 @@
-// when completed, add class("completed")
+var todo = function(attributes){
+	this.id = attributes.id;
+	this.task= attributes.task,
+	this.completed= false
+}
 
-$(document).ready(function(){
-	console.log("thundercats go");
-});
+// todoList
+var todoList = function(){
+ this.todoArray = []
+}
+
+todoList.prototype.addTask= function(todo){
+	this.todoArray.push(todo);
+}
+
+todoList.prototype.completeTask = function(todo){
+	this.todoArray.pop(todo);
+	todo.completed = true;
+	// $(this).toggleClass("completed");
+}
 
 
 
-
-	$("form").on("submit", function(event){
-		event.preventDefault();
-
-		var task = $("#task").val();
-		console.log(task);
-		$("ul").append("<li>"+ task +"</li>");
-		$("#task").val("");
-	});
-
-
-
-	$("ul").on("click", "li", function(){
-		$(this).toggleClass("completed");
-	});
+var myTodos = new todoList();
