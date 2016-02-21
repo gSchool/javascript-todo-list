@@ -1,19 +1,8 @@
-$(document).on('ready', function() {
-  addOnClick();
-  addOnEnter();
-});
-
-function addOnClick() {
-  $('button').on('click', function() {
+function addOnClick(event) {
+  event.preventDefault();
+  $('form').on('submit', function() {
+    console.log($('input').val());
     if($('input').val()) {
-      appendAndClear();
-    }
-  });
-}
-
-function addOnEnter() {
-  $(document).keypress(function(e) {
-    if($('input').val() && e.which === 13) {
       appendAndClear();
     }
   });

@@ -7,11 +7,13 @@
 <body>
 <main>
   <h1>Todo App</h1>
+  <form onsubmit="return addOnClick(event);">
   <input type="text">
   <ul>
     <li>Walk Dog</li>
   </ul>
-  <button id="add_todo">Add Todo</button>
+  <button type="submit" id="add_todo">Add Todo</button>
+  <form>
 </main>
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
