@@ -24,23 +24,13 @@ function addToDom() {
 }
 
 
-/* Methods for appending ToDo items set by user */
+/* Method for appending ToDo items set by user */
 
-// user can add task using form submission
 $('form').on('submit', function(e) {
   e.preventDefault();
 
   addToDom();
 
-  //clear input field on submit
-  $('#usrTodo').val('');
-});
-
-// user can add talk using button click
-$('button').on('click', function(e) {
-  e.preventDefault();
-
-  addToDom();
   //clear input field on submit
   $('#usrTodo').val('');
 });

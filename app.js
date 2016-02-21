@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3003;
 
 // allow usage of the CSS and JS static files
 app.use(express.static(__dirname + '/public'));
@@ -20,5 +20,5 @@ app.get('/', function(req,res) {
 });
 
 app.listen(port, function() {
-  console.log('Server listening at ' + port);
+console.log('Server listening at ' + port);
 });
