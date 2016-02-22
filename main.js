@@ -46,7 +46,7 @@ function getDataFromLocalStorage(){
 function removeDataFromLocalStorage(removeThis){
 
   var itemToRemove2 = getDataFromLocalStorage();
-  localStorage.clear();
+  localStorage.removeItem('todos');
   
   for (var i = 0; i < itemToRemove2.length; i++) {
     if(removeThis === itemToRemove2[i]){
