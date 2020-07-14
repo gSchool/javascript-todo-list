@@ -1,6 +1,8 @@
 # Todo List
 
 Create a todo list app using HTML, JS, and the CSS file `todos.css` in this directory.  Your app should look and function like the following GIF:
+
+
 ![](http://i.gyazo.com/f5261ff193975c56b6ca3be266a96420.gif)
 
 
