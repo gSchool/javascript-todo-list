@@ -1,6 +1,17 @@
 # Todo List
 
 Create a todo list app using HTML, JS, and the CSS file `todos.css` in this directory.  Your app should look and function like the following GIF:
+![](http://i.gyazo.com/f5261ff193975c56b6ca3be266a96420.gif)
+
+
+### Getting started
+
+ - You'll need to create a blank HTML page and JS File. 
+
+ - Then link your JS File and the CSS File (todos.css) inside your HTML file
+ (Hint: Look up script tag for JS, and google "how to link css file to html")
+
+ - Either put your script tag all the way at the end of your HTML file or add the `defer` attribute [more info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
 ### Part One
 
@@ -14,4 +25,3 @@ Create a todo list app using HTML, JS, and the CSS file `todos.css` in this dire
 * When a user clicks on 'Edit' on a todo, it lets the user edit the todo item
 
 
-![](http://i.gyazo.com/f5261ff193975c56b6ca3be266a96420.gif)
