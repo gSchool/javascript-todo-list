@@ -40,7 +40,7 @@ ul li {
 
 #add_todo{
   margin-left:10px;
-  background:#FF6666;
+  background:linear-gradient(teal,cyan);
   color:#662929;
   font-size:16px;
   border:none;
